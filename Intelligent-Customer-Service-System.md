@@ -1,6 +1,8 @@
-***
-
-## 智能客服系统
+---
+title: 智能客服系统项目文档
+date: 2026-03-27 10:00:00
+tags: [智能客服, LangChain, LLM, RAG]
+---
 
 ## 项目概述
 
@@ -15,15 +17,15 @@
 
 ## 技术栈分析
 
-| 技术/框架                  | 版本      | 用途                  | 来源    |
-| ---------------------- | ------- | ------------------- | ----- |
-| Python                 | 3.12    | 编程语言                | 系统环境  |
-| LangChain              | 1.2.13  | 构建LLM应用的框架          | pip安装 |
-| LangChain Community    | 0.4.1   | 提供社区集成的组件           | pip安装 |
-| DashScope              | 1.25.15 | 调用通义千问模型            | pip安装 |
-| Chroma                 | 1.5.5   | 向量存储库               | pip安装 |
-| HuggingFace Embeddings | -       | 文本嵌入模型              | pip安装 |
-| Sentence-Transformers  | 5.3.0   | sentence embeddings | pip安装 |
+| 技术/框架 | 版本 | 用途 | 来源 |
+|---------|------|------|------|
+| Python | 3.12 | 编程语言 | 系统环境 |
+| LangChain | 1.2.13 | 构建LLM应用的框架 | pip安装 |
+| LangChain Community | 0.4.1 | 提供社区集成的组件 | pip安装 |
+| DashScope | 1.25.15 | 调用通义千问模型 | pip安装 |
+| Chroma | 1.5.5 | 向量存储库 | pip安装 |
+| HuggingFace Embeddings | - | 文本嵌入模型 | pip安装 |
+| Sentence-Transformers | 5.3.0 |  sentence embeddings | pip安装 |
 
 ## 项目流程
 
@@ -53,16 +55,19 @@ flowchart TD
    - 加载文档并分割成文本块
    - 初始化嵌入模型
    - 创建向量存储和检索器
+
 2. **用户交互**
    - 接收用户输入
    - 调用agent处理用户请求
    - 根据需要调用工具（职位信息查询、公司信息查询、招聘平台信息检索）
    - 生成回复并返回给用户
+
 3. **工具调用流程**
    - agent分析用户请求
    - 选择合适的工具
    - 执行工具并获取结果
    - 将结果整合到回复中
+
 4. **RAG流程**
    - 接收用户查询
    - 使用检索器从文档中检索相关信息
@@ -91,7 +96,7 @@ flowchart TD
 
 ## 演示效果
 
-!\[智能客服系统演示]\(images/Intelligent-Customer-Service-System.gif 智能客服系统演示)
+![智能客服系统演示](images/Intelligent-Customer-Service-System.gif "智能客服系统演示")
 
 ### 职位信息查询
 
@@ -110,7 +115,6 @@ flowchart TD
 **用户输入**：职位发布规则是什么？
 
 **系统回复**：根据招聘平台使用指南，职位发布规则包括：
-
 - 企业发布职位需提供真实有效的公司信息
 - 职位描述应清晰、准确，包含职责、要求和薪资范围
 - 不得发布虚假职位或违规内容
@@ -120,7 +124,6 @@ flowchart TD
 **用户输入**：我想了解简历投递流程
 
 **系统回复**：根据招聘平台使用指南，简历投递流程包括：
-
 - 求职者可通过平台直接投递简历
 - 企业应在3个工作日内查看并回复
 - 平台支持多种简历格式上传
@@ -164,7 +167,7 @@ mindmap
 ### 主要文件
 
 - **lagents.py**：主脚本，包含系统的核心实现
-- **recruitment\_platform\_manual.txt**：招聘平台使用指南，用于RAG检索
+- **recruitment_platform_manual.txt**：招聘平台使用指南，用于RAG检索
 
 ### 核心代码结构
 
