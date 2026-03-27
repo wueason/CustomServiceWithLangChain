@@ -96,7 +96,7 @@ flowchart TD
 
 ## 演示效果
 
-![智能客服系统演示](images/Intelligent-Customer-Service-System.gif "智能客服系统演示")
+![智能客服系统演示](images/Intelligent-Customer-Service-System.gif)
 
 ### 职位信息查询
 
