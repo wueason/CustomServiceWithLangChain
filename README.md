@@ -1,8 +1,4 @@
----
-title: 基于LangChain的智能客服系统
-date: 2026-03-27 20:00:00
-tags: [智能客服, LangChain, LLM, RAG]
----
+# 基于LangChain的智能客服系统
 
 ## 项目概述
 
